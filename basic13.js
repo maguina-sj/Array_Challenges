@@ -37,14 +37,74 @@
 
 // given an array, find and print its largest element
 
-let myArray2 = [4,7,2,8,23,68,1]
-function printMaxOfArray(arr) {
-    let max = 0;
-    for(var i = 0; i < arr.length; i++) {
-        if (max < arr[i]) {
-            max = arr[i];
+// let myArray2 = [4,7,2,8,23,68,1]
+// function printMaxOfArray(arr) {
+//     let max = 0;
+//     for(var i = 0; i < arr.length; i++) {
+//         if (max < arr[i]) {
+//             max = arr[i];
+//         }
+//     } 
+//     console.log(max)
+// }
+// printMaxOfArray(myArray2);
+
+// analyze an array's values and print the average
+
+// let myArray3 = [2,5,2,7,22,7,65]
+
+// function printAverageOfArray(arr) {
+//     let avg = 0;
+//     let sum = 0;
+//     for (let i =0; i<arr.length; i++) {
+//         sum += arr[i]  
+//     }
+//     // console.log(sum)
+//     avg = sum/arr.length;
+//     console.log(avg)
+// }
+// printAverageOfArray(myArray3);
+
+//create an array with all the odd integers between 1 and 255 (inclusive)
+
+function returnOddsArray1To255() {
+    let oddArray=[];
+    for (let i =1; i< 256; i++) {
+        if( i %2 !=0){
+            oddArray.push(i)
         }
-    } 
-    console.log(max)
+    }
+    console.log(JSON.stringify(oddArray))
 }
-printMaxOfArray(myArray2);
+
+returnOddsArray1To255();
+
+//square each value in a given array, returning that same array with changed values
+
+// let myArray4 = [1,2,3,4,5]
+
+// function squareArrayVals(arr) {
+//     for (let i =0; i<arr.length; i++) {
+//         arr[i] = arr[i]*arr[i]
+//     }
+//     console.log(arr)
+// }
+
+// squareArrayVals(myArray4);
+
+//given an array and a value Y, count and print the number of array values greater than Y
+
+let myArray5 = [3,5,8,13,4,90,4]
+let y =7
+function printArrGreaterThanY(arr, y) {
+    let count = 0
+    for (let i=0; i<arr.length; i++) {
+        if(arr[i] > y) {
+            count++;
+            console.log(arr[i])
+        }
+    }
+    console.log(count)
+}
+
+printArrGreaterThanY(myArray5, 7)
